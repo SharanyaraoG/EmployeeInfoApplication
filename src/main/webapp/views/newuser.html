@@ -1,0 +1,117 @@
+<h2 class="login">New User?</h2>
+
+<div class = "register" ng-if = "data">Registered successfully</div>
+
+<form class="form-horizontal"  name="form" >			
+	<div class="form-group">
+		<label class="control-label col-sm-4" for="text">Employee Id:</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="text" placeholder="Enter employee Id" name="empId" ng-model="user.empId" ng-pattern = "/^[0-9]*$/" required>
+					<span style = "color:red" ng-show = "form.empId.$touched && form.empId.$invalid" >
+						<span ng-show = "form.empId.$error.pattern">Invalid empId will take only digits</span>
+						<span ng-show = "form.empId.$error.required">Employee Id is required</span>
+					</span>
+			</div>
+	</div> 
+
+	<div class="form-group"> 
+		<label class="control-label col-sm-4" for="text">User Name:</label>
+			<div class="col-sm-4">
+				<input type="email" class="form-control" id="text" placeholder="username@email.com" name="username" ng-model="user.username" required>
+					<span style = "color:red" ng-show = "form.username.$touched && form.username.$invalid" >
+						<span ng-show = "form.username.$error.required">Username is required</span>
+					</span>
+			</div>
+	</div>
+
+	<div class="form-group"> 
+		<label class="control-label col-sm-4" for="text">Employee name:</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="text" placeholder="Enter full name" name="empName" ng-model="user.empName" required>
+					<span style = "color:red" ng-show = "form.empName.$touched && form.empName.$invalid" >
+						<span ng-show = "form.empName.$error.required">Employee name is required</span>
+					</span>
+			</div>
+	</div>
+
+	<div class="form-group"> 
+		<label class="control-label col-sm-4" for="pwd">Enter password:</label>
+			<div class="col-sm-4">
+				<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" ng-model="user.password" ng-minlength = "8" ng-maxlength = "15" ng-pattern="/((?=.*\d)(?=.*[A-Z])(?=.*\W))/" required>
+				<span style = "color:red" ng-show = "form.pwd.$touched && form.pwd.$invalid" >
+					<span ng-show = "form.pwd.$touched && form.pwd.$error.minlength">Too short</span>
+					<span ng-show = "form.pwd.$touched && form.pwd.$error.maxlength">Too long</span>
+					<span ng-show = "form.pwd.$error.pattern">password should contain atleast one digit, special character and uppercase letter</span>
+					<span ng-show = "form.pwd.$error.required">password is required</span>
+				</span>
+			</div>
+	</div>
+
+	<div class="form-group"> 
+		<label class="control-label col-sm-4" for="pwd">Re-enter password:</label>
+			<div class="col-sm-4">
+				<input type="password" class="form-control" id="repwd" placeholder="Re-enter password" name="repwd" ng-model="user.rePwd" required>
+					<span style = "color:red" ng-show = "form.repwd.$touched && form.repwd.$invalid" >
+						<span ng-show = "form.repwd.$error.required">Re-password is required</span>
+					</span>
+			</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-sm-4" for="sel1">Designation:</label>
+			<div class="col-sm-4">
+				<select class="form-control" id="sel1" name="designation" ng-model="user.designationId" required>
+					<option value="" selected disabled>Please select</option>
+					<option value = "1">Trainee Software Engineer</option>
+					<option value = "2">Software Engineer</option>
+					<option value = "3">Technical Lead</option>
+					<option value = "4">Project Manager</option>
+					<option value = "5">Program Manager</option>
+				</select>
+					<span style = "color:red" ng-show = "form.designation.$touched && form.designation.$invalid" >
+						<span ng-show = "form.designation.$error.required">Designation is required</span>
+					</span>
+			</div>
+	</div> 
+
+	<div class="form-group">
+		<label class="control-label col-sm-4" for="experience">Experience:</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="experience" placeholder="Enter experience" name="experience" ng-model="user.experience" ng-pattern = "/^[0-9]*$/" required>
+				<span style = "color:red" ng-show = "form.experience.$touched && form.experience.$invalid" >
+					<span ng-show = "form.experience.$error.pattern">Invalid will take only digits</span>
+					<span ng-show = "form.experience.$error.required">Designation is required</span>
+				</span>
+			</div>
+	</div> 
+	
+	<div class="form-group">
+		<label class="control-label col-sm-4" for="experience">Salary:</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="salary" placeholder="Enter Salary" name="salary" ng-model="user.salary" ng-pattern = "/^[0-9]*$/" required>
+				<span style = "color:red" ng-show = "form.salary.$touched && form.salary.$invalid" >
+					<span ng-show = "form.salary.$error.pattern">Invalid will take only digits</span>
+					<span ng-show = "form.salary.$error.required">Salary is required</span>
+				</span>
+			</div>
+	</div> 
+
+	<div class="form-group">
+		<div class="submit-reset">       
+			<button type="submit" class="btn btn-default" ng-click="register()" ng-disabled="form.$invalid">Submit</button>
+			<button type = "reset" class="btn btn-default" ng-click = "reset()">Reset</button>
+		</div>
+	</div>
+	
+	<div class = "mismatch" ng-if = "mismatchmsg">password and re-enter password should match</div>	
+	
+	<div class="col-sm-offset-4 col-sm-4">
+		<a href="#/login">Click to Login</a>
+	</div>
+	
+			
+</form>
+
+		
+		
+

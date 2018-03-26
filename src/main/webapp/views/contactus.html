@@ -1,0 +1,13 @@
+<div ng-include="'views/menubar.html'"></div>
+<div class="bs-3">
+    <ul class="breadcrumb">
+        <li><span class="glyphicon glyphicon-home"></span>&nbsp;<a href="#/home">Home</a></li>
+        <li class="active">Contactus</li>
+    </ul>
+</div>
+<div class = "contact">
+	<h4>Contact Details :</h4>
+	<div ng-repeat = "item in data" ng-show = "item.content_type == 'ContactName' || item.content_type == 'ContactNumber' || item.content_type == 'Email' || item.content_type == 'Address'"> 
+		<p>{{item.content_type}}:&nbsp;{{item.data}}</p>
+	</div>
+</div>

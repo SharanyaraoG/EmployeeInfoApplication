@@ -1,0 +1,15 @@
+<div ng-include="'views/menubar.html'"></div>
+<div class="gallery">
+	<img ng-src="{{displayImage}}" style="height:400px;width:600px;float: right"/>
+	<span class="glyphicon glyphicon-menu-right" style='float: right;' ng-click="imgInc()"></span>
+	<span class="glyphicon glyphicon-menu-left" style='float: left;' ng-click="imgDec()"></span>	
+</div>
+<div   style="margin-top:652px;">
+	<table border="1">
+			<tr>				
+				<td ng-repeat ="img in images">
+					<img ng-src ="{{img.image}}"  style="width:280px"  class="img-thumbnail" ng-click="tempImage(img.image)"/>&nbsp;
+				</td>		
+			</tr>
+		</table>
+</div>

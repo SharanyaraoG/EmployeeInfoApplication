@@ -1,0 +1,17 @@
+<div ng-include="'views/menubar.html'"></div>
+<div class="bs-3">
+    <ul class="breadcrumb">
+        <li><span class="glyphicon glyphicon-home"></span>&nbsp;<a href="#/home">Home</a></li>
+        <li class="active">Project</li>
+    </ul>
+</div>
+
+<div class = "contact">
+	<h4>Project List :</h4>
+	<ul>
+		<li ng-repeat = "item in data" ng-show = "item.content_type == 'Java' || item.content_type == 'Angularjs'"> 
+		<p>{{item.content_type}}</p>
+		<p>&nbsp;&nbsp;&nbsp;{{item.data}}</p>
+		</li>
+	</ul>
+</div>

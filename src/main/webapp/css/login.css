@@ -1,0 +1,82 @@
+body{
+	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+    background-size: cover;
+    
+}
+.navbar-inverse1{
+	background-color: #2C3E50;
+	border-color: #2C3E50;
+}
+div.container-fluid li.tag2 a{
+	color: #0077b3;
+	font-size: 20px;
+}
+.navbar1{
+	background-color: #EEF9FF;
+	margin-top: -20px;
+}
+.left-addon{
+	text-align:center; 
+}
+.left-addon .glyphicon{ 
+	left:  0px;
+}
+.left-addon input{ 
+	padding-left:  30px; 
+}
+.tag1 {
+	color: #ffffff;
+}
+.contact{
+	margin-left: 20px;
+}
+.valuelabs {
+	color: black;
+	text-align: center;
+}
+h2.login1 {
+	text-align: center;
+}
+.value{
+	background-color: #EEF9FF;
+	border-color: #2C3E50;
+	border-top-style: outset;
+}
+input.ng-touched.ng-invalid {
+    border: 1px solid red;
+}
+.errormsg{
+	color: red;
+	text-align: center;
+}
+hr{
+	border-top: 1px solid #cccccc;
+}
+img{
+	height: 50px; 
+	width: 60px;
+}
+
+tr td:nth-child(1) { 
+   text-align: center;
+}
+.submit-reset{
+	text-align: center;
+}
+h2.login {
+	text-align: center;
+}
+.register{
+	color: green;
+	text-align: center;
+}
+.mismatch{
+	text-align : center;
+	color : red;
+}
+select.ng-touched.ng-invalid{
+	border: 1px solid red;
+}
+

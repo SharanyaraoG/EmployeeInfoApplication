@@ -1,0 +1,12 @@
+[
+	{"content_type" : "ContactName", "data" : "sharanya"},
+	{"content_type" : "ContactNumber", "data" : "987654321"},
+	{"content_type" : "Email", "data" : "xxxx@gmail.com"},
+	{"content_type" : "Address", "data" : "2-9-163/1, Kukatpally, Hyderabad"},
+	{"content_type" : "Java", "data" : "This is a java project "},	
+	{"content_type" : "Angularjs", "data" : "This is a Angularjs project "},
+	{"id" : 1, "content_type" : "Assurance Services", "data" : "Reduce software development efforts, lower maintenance costs and achieve faster time-to-market with TCS’ Assurance Services."},
+	{"id" : 2, "content_type" : "Engineering & Industrial Services", "data" : "Foster product innovation, improve operational efficiencies and shorten time-to-markets with TCS’ Engineering and Industrial Services (EIS)."},
+	{"id" : 3, "content_type" : "Eco-sustainability Services", "data" : "Integrate sustainability into your business to drive resource efficiency. "},
+	{"id" : 4, "content_type" : "IT Infrastructure Services", "data" : "Transform your IT landscape with effective infrastructure management solutions offered by TCS’ IT Infrastructure Services."}
+]
